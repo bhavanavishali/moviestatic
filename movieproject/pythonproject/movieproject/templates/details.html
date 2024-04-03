@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h4>MOVIE NAME :-{{movies.movie}}</h4>
+<br>
+<h4>DESCRIPTION:-{{movies.des}}</h4>
+<br>
+<h4>YEAR:-{{movies.year}}</h4>
+<br>
+<img src="{{movies.image.url}}" height="200px" width="200px">
+
+<a href="{% url 'movieapp:update' movies.id %}"><button type="submit">update</button></a>
+<a href="{% url 'movieapp:delete' movies.id %}"><button type="submit">Delete</button></a>
+
+{% endblock %}
